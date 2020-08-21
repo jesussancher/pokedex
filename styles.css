@@ -24,18 +24,18 @@ body{
     z-index: 10;
 }
 .cl-inner{
-    margin: 12px;
-    height: 98%;
+    /* margin: 12px; */
+    height: 100%;
     align-self: end;
-    border-radius: 15px 0 10px 10px;
+    border-radius: 0px 0 10px 10px;
     background: linear-gradient(45deg, var(--dark-red-transparent) 0%, rgba(0,0,0,0) 20%);
     background-color: var(--dark-red);
     z-index: 15;
 }
 .cl-curve{
     justify-self: end;
-    margin-right: 12px;
-    width: 45%;
+    /* margin-right: 12px; */
+    width: 40%;
     clip-path: polygon(17% 43%, 100% 43%, 100% 100%, 0% 100%);
     background-color: var(--dark-red);
     z-index: 8;
