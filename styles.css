@@ -142,12 +142,12 @@ body{
     bottom: 5px;
     right: 25px;
     height: 38px;
-    width: 100px;
+    width: 30%;
     z-index: 18;
 }
 .speaker-line{
     height: 6px;
-    width: 100px;
+    width: 100%;
     border-radius: 30px;
     background-color: var(--dark);
 }
@@ -156,7 +156,7 @@ body{
 .green-light{background: radial-gradient(circle,rgb(1, 255, 43) 0%,rgb(6, 134, 27) 95%);}
 .debug{border: 2px solid green}
 .big-circle, .bc-inner, .bci-eye, .bcie-light, .small-circle, .display-on{border-radius: 50%;}
-.case-right, .case-left, .big-circle, .white-display, .small-circle{box-shadow: 10px 10px 22px 0px var(--dark-red-transparent)}
+.case-right, .case-left, .big-circle, .white-display {box-shadow: 10px 10px 22px 0px var(--dark-red-transparent)}
 .bg-red{background-color: var(--main-red)}
 .border{border: 4px solid var(--border)}
 .grid{display: grid}
