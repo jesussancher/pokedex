@@ -7,21 +7,28 @@
     <title>Pokedex</title>
 </head>
 <body>
-    <div class="container grid grid-cases">
+    <div class="container grid grid-cases h-100">
         <div class="case-left bg-red relative">
             <div class="big-circle absolute"></div>
-            <div class="bc-inner absolute"></div>
+            <div class="bc-inner border absolute"></div>
             <div class="bci-eye absolute"></div>
             <div class="bcie-light absolute"></div>
             <div class="top-lights grid-top-lights absolute">
-                <div class="small-circle red-light shadow"></div>
-                <div class="small-circle yellow-light shadow"></div>
-                <div class="small-circle green-light shadow"></div>
+                <div class="small-circle red-light border"></div>
+                <div class="small-circle yellow-light border"></div>
+                <div class="small-circle green-light border"></div>
             </div>
             <div>
-                <div class="white-display absolute shadow">
+                <div class="white-display shadow">
                     <div class="display"></div>
+                    <div class="speaker grid grid-speaker">
+                        <div class="speaker-line"></div>
+                        <div class="speaker-line"></div>
+                        <div class="speaker-line"></div>
+                    </div>
+                    <div class="display-on"></div>
                 </div>
+                
                 <div class="relative grid grid-left-case">
                     <div class="grid grid-right-case relative">
                         <div class="cl-curve relative"></div>
@@ -33,7 +40,8 @@
         </div>
             <div class="grid grid-right-case">
                 <div class="cr-curve bg-red relative"></div>
-                <div class="case-right bg-red relative"></div>
+                <div class="case-right bg-red relative">
+                </div>
             </div>
     </div>
 </body>

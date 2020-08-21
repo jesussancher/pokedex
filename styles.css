@@ -2,10 +2,13 @@
     margin: 0;
 }
 :root{
-    --main-red: #ce1818;
-    --dark-red: #b30f0f;
-    --border: #4e0707;
+    --main-red: #ee2658;
+    --dark-red: #c9235a;
+    --border: #471d57;
     --dark-red-transparent: rgba(148,12,12,0.5);
+    --light-blue: #50c8ec;
+    --dark-blue: #00b4d5;
+    --dark: #19184d;
 }
 body{
     background-color: #cbdbda;
@@ -69,19 +72,19 @@ body{
     z-index: 8;
 }
 .big-circle{
-    height: 75px;
-    width: 75px;
-    top: 15px;
-    left: 35px;
+    height: 85px;
+    width: 85px;
+    top: 10px;
+    left: 30px;
     background-color: #fff;
     z-index: 10;
 }
 .bc-inner{
     height: 58px;
     width: 58px;
-    top: 24px;
-    left: 44px;
-    background: radial-gradient(circle,rgb(72, 184, 199) 0%,rgb(62, 136, 146) 95%);
+    top: 20px;
+    left: 40px;
+    background: radial-gradient(circle, var(--light-blue) 0%,var(--dark-blue) 95%);
     z-index: 10;
 }
 .bci-eye{
@@ -89,7 +92,7 @@ body{
     width: 15px;
     top: 45px;
     left: 65px;
-    background-color: rgb(62, 136, 146);
+    background-color: var(--dark-blue);
     z-index: 12;
 }
 .bcie-light{
@@ -115,27 +118,48 @@ body{
     width: 70%;
     top: 25%;
     left: 10%;
-    border-radius: 5px 5px 5px 40px;
+    border-radius: 15px 15px 15px 60px;
     background-color: #fff;
     z-index: 16;
 }
 .display{
     height: 65%;
-    width: 76%;
+    width: 90%;
     margin: 10% auto;
     border-radius: 5px;
-    background-color: rgb(51, 149, 173);
+    background-color: var(--light-blue);
     z-index: 17;
+}
+.display-on{
+    bottom:12px;
+    left: 50px;
+    height: 25px;
+    width: 25px;
+    background-color: var(--main-red);
+    border: solid 3px var(--dark)
+}
+.speaker{
+    bottom: 5px;
+    right: 25px;
+    height: 38px;
+    width: 100px;
+    z-index: 18;
+}
+.speaker-line{
+    height: 6px;
+    width: 100px;
+    border-radius: 30px;
+    background-color: var(--dark);
 }
 .red-light{background: radial-gradient(circle,rgb(255, 1, 1) 0%,rgb(150, 0, 0) 95%);}
 .yellow-light{background: radial-gradient(circle,rgb(255, 238, 1) 0%,rgb(168, 157, 3) 95%);}
 .green-light{background: radial-gradient(circle,rgb(1, 255, 43) 0%,rgb(6, 134, 27) 95%);}
 .debug{border: 2px solid green}
-.big-circle, .bc-inner, .bci-eye, .bcie-light, .small-circle{border-radius: 50%;}
+.big-circle, .bc-inner, .bci-eye, .bcie-light, .small-circle, .display-on{border-radius: 50%;}
 .case-right, .case-left, .big-circle, .white-display, .small-circle{box-shadow: 10px 10px 22px 0px var(--dark-red-transparent)}
 .bg-red{background-color: var(--main-red)}
 .border{border: 4px solid var(--border)}
-.grid{display: grid; height: 100%;}
+.grid{display: grid}
 .grid-cases{grid-template-columns: 56% 44%}
 .grid-left-case{grid-template-columns: 90% 10%}
 .grid-right-case{grid-template-rows: 20% 80%}
@@ -145,5 +169,7 @@ body{
     justify-items: center;
     align-items: center;
 }
+.grid-speaker{grid-template-rows:1fr 1fr 1fr}
 .relative{position: relative}
-.absolute,.hinge:before,.hinge:after{position: absolute}
+.absolute,.hinge:before,.hinge:after, .white-display, .speaker, .display-on{position: absolute}
+.h-100{height: 100%}
