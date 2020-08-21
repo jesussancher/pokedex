@@ -15,7 +15,7 @@ body{
     /* overflow: hidden; */
 }
 .container{
-    height: 80vh;
+    height: 90vh;
     width: 50%;
     margin: 10vh auto;
 }
@@ -35,8 +35,8 @@ body{
 .cl-curve{
     justify-self: end;
     /* margin-right: 12px; */
-    width: 40%;
-    clip-path: polygon(17% 43%, 100% 43%, 100% 100%, 0% 100%);
+    width: 60%;
+    clip-path: polygon(50% 43%, 100% 43%, 100% 100%, 0% 100%);
     background-color: var(--dark-red);
     z-index: 8;
 }
@@ -67,8 +67,8 @@ body{
 }
 .cr-curve{
     left: -8px;
-    width: 45%;
-    clip-path: polygon(0 43%, 73% 43%, 100% 100%, 0% 100%);
+    width: 65%;
+    clip-path: polygon(0 43%, 50% 43%, 100% 100%, 0% 100%);
     z-index: 8;
 }
 .big-circle{
@@ -170,8 +170,52 @@ body{
     height: 15px;
     border-radius: 30px;
 }
+.label{
+    width: 35%;
+    height: 40px;
+    border-radius: 5px;
+    bottom: 40px;
+    left: 15%;
+    background-color: rgb(255, 238, 1)
+}
+.arrows{
+    height: 90px;
+    width: 25%;
+    bottom: 40px;
+    right: 10%;
+}
+.arrow-up{
+    grid-area: up;
+    border-radius: 4px 4px 0px 0px;
+}
+.arrow-up:after{
+    content: "";
+    position: absolute;
+    display: block;
+    clip-path: polygon(50% 37%, 0% 100%, 100% 100%);
+    background-color: #471d57;
+    z-index: 20;
+}
+.arrow-down{
+    grid-area: down;
+    border-radius: 0px 0px 4px 4px;
+}
+.arrow-left{
+    grid-area: left;
+    border-radius: 4px 0px 0px 4px;
+}
+.arrow-right{
+    grid-area: right;
+    border-radius: 0px 4px 4px 0px;
+}
+.arrow-center{grid-area:center}
 .s-green{background-color: rgb(1, 255, 43)}
 .s-orange{background-color: rgb(250, 179, 27)}
+.arrow-up, .arrow-down, .arrow-left, .arrow-right, .arrow-center {
+    background-color: var(--dark); 
+    height: 100%; 
+    width: 100%;
+}
 .red-light{background: radial-gradient(circle,rgb(255, 1, 1) 0%,rgb(150, 0, 0) 95%)}
 .yellow-light{background: radial-gradient(circle,rgb(255, 238, 1) 0%,rgb(168, 157, 3) 95%)}
 .green-light{background: radial-gradient(circle,rgb(1, 255, 43) 0%,rgb(6, 134, 27) 95%)}
@@ -192,6 +236,10 @@ body{
 }
 .grid-speaker{grid-template-rows:1fr 1fr 1fr}
 .grid-selectors{grid-template-columns: 1fr 1fr}
+.grid-arrows{grid-template-areas:
+    ". up ."
+    "left center right"
+    ". down ." ;}
 .relative{position: relative}
-.absolute,.hinge:before,.hinge:after, .white-display, .speaker, .display-on, .joystick, .selectors-container{position: absolute}
+.absolute,.hinge:before,.hinge:after, .white-display, .speaker, .display-on, .joystick, .selectors-container, .label, .arrows{position: absolute}
 .h-100{height: 100%}
