@@ -14,27 +14,31 @@
 }
 body{
     background-color: #cbdbda;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 @media only screen and (max-width: 600px) {
     .container{
-        /* width:200%; */
+        visibility: hidden;
+    }
+    .sm-container{
         height: 100vh;
+        width: 100%;
+        margin: 0 auto;
     }
     .sm{
-        display: none;
         visibility: hidden;
     }
     .grid{
-    
-        display: block;
+        display: none;
     }
     .grid-cases{
-        /* width: 100%; */
-        grid-template-columns: 200% 0%
+        grid-template-columns: 0% 0%
     }
 } 
 @media only screen and (min-width: 600px) {
+    .sm-container{
+        visibility: hidden;
+    }
     .container{
         height: 100vh;
         width: 95%;
@@ -42,6 +46,9 @@ body{
     }
 }   
 @media only screen and (min-width: 768px) {
+    .sm-container{
+        visibility: hidden;
+    }
     .container{
         height: 100vh;
         width: 80%;
@@ -49,6 +56,9 @@ body{
     }
 }
 @media only screen and (min-width: 992px) {
+    .sm-container{
+        visibility: hidden;
+    }
     .container{
         height: 100vh;
         width: 75%;
@@ -56,6 +66,9 @@ body{
     }
 }
 @media only screen and (min-width: 1200px) {
+    .sm-container{
+        visibility: hidden;
+    }
     .container{
         height: 100vh;
         width: 65%;
