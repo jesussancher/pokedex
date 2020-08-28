@@ -14,11 +14,11 @@
 }
 body{
     background-color: #cbdbda;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 @media only screen and (max-width: 600px) {
     .container{
-        width:200%;
+        /* width:200%; */
         height: 100vh;
     }
     .sm{
