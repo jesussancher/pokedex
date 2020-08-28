@@ -10,6 +10,7 @@
     --lighter-blue: #5bd9ff;
     --dark-blue: #00b4d5;
     --dark: #19184d;
+    --darker: #15123b;
 }
 body{
     background-color: #cbdbda;
@@ -221,7 +222,6 @@ body{
 .arrow-center{grid-area:center}
 .bb-container{
     height: 50px;
-    left: 8;
     right: 0;
     margin: auto;
     width: 90%;
@@ -237,7 +237,7 @@ body{
 }
 .tb-container{
     height: 50px;
-    left: 30px;
+    left: 10%;
     right: 0;
     width: 55%;
     bottom: 30%;
@@ -300,7 +300,6 @@ body{
 .keyi4{grid-area: ki4}
 .keyi5{grid-area: ki5}
 .keyi6{grid-area: ki6}
-
 .key{
     background-color: var(--light-blue);
     transition: background-color 100ms ease-in-out;
@@ -308,6 +307,17 @@ body{
 }
 .key:hover{
     background-color: var(--dark-blue);
+}
+.r-display{
+    height: 90px;
+    width: 80%;
+    background-color: var(--dark);
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    border-top: solid 8px var(--darker)
 }
 .key2, .key4, .keyi1, .keyi2, .keyi3, .keyi4, .keyi5, .keyi6{
     border-left: solid 2px var(--dark-blue);
@@ -333,11 +343,10 @@ body{
     width: 100%;
 }
 .arrow-up, .arrow-down, .arrow-left, .arrow-right{cursor:pointer}
-    
-.arrow-up:hover{background: linear-gradient(#0e0d2c 0%, var(--dark) 100%)}
-.arrow-down:hover{background: linear-gradient( var(--dark) 0%, #0e0d2c 100%)} 
-.arrow-right:hover{background: linear-gradient(90deg, var(--dark) 0%, #0e0d2c 100%)} 
-.arrow-left:hover{background: linear-gradient(90deg, #0e0d2c 0%, var(--dark) 100%)} 
+.arrow-up:hover{background: linear-gradient(var(--darker) 0%, var(--dark) 100%)}
+.arrow-down:hover{background: linear-gradient( var(--dark) 0%, var(--darker) 100%)} 
+.arrow-right:hover{background: linear-gradient(90deg, var(--dark) 0%, var(--darker) 100%)} 
+.arrow-left:hover{background: linear-gradient(90deg, var(--darker) 0%, var(--dark) 100%)} 
 
 .arrow-down:hover, .arrow-left:hover, .arrow-right:hover {
 }
