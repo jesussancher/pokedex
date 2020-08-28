@@ -7,6 +7,7 @@
     --border: #471d57;
     --dark-red-transparent: rgba(148,12,12,0.5);
     --light-blue: #50c8ec;
+    --lighter-blue: #5bd9ff;
     --dark-blue: #00b4d5;
     --dark: #19184d;
 }
@@ -34,7 +35,6 @@ body{
 }
 .cl-curve{
     justify-self: end;
-    /* margin-right: 12px; */
     width: 60%;
     clip-path: polygon(50% 43%, 100% 43%, 100% 100%, 0% 100%);
     background-color: var(--dark-red);
@@ -59,8 +59,6 @@ body{
 .hinge:before{top: 30px}
 .hinge:after{bottom: 30px}
 .case-right{
-    height: 100%;
-    align-self: end;
     left: -8px;
     border-radius: 0 15px 15px 0;
     z-index: 5;
@@ -221,6 +219,104 @@ body{
     clip-path: polygon(63% 50%, 0% 100%, 0% 0%);
 }
 .arrow-center{grid-area:center}
+.bb-container{
+    height: 50px;
+    left: 8;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    bottom: 13%;
+    z-index: 30;
+}
+.bot-but{
+    height: 45px;
+    width: 85%;
+    background-color: var(--dark);
+    border-radius: 8px;
+    z-index: 30;
+}
+.tb-container{
+    height: 50px;
+    left: 30px;
+    right: 0;
+    width: 55%;
+    bottom: 30%;
+    z-index: 30;
+}
+.two-but{
+    height: 30px;
+    width: 95%;
+    background-color: #fff;
+    border-radius: 3px;
+    z-index: 30;
+}
+.yellow-circle{
+    height: 30px;
+    width: 30px;
+    right: 10%;
+    bottom: 34%;
+}
+.r-speaker{
+    top: 53%;
+    right: 25px;
+    height: 38px;
+    width: 25%;
+    z-index: 18;
+}
+.r-speaker-line{
+    height: 6px;
+    width: 90%;
+    border-radius: 30px;
+    background-color: var(--dark);
+}
+.keyboard{
+    height: 70px;
+    width: 80%;
+    top: 35%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 18;
+}
+.key1{
+    grid-area: k1;
+    border-radius: 10px 0px 0px 0px;
+}
+.key2{
+    grid-area: k2;
+    border-radius: 0px 10px 0px 0px;
+}
+.key3{
+    grid-area: k3;
+    border-radius: 0px 0px 0px 10px;
+}
+.key4{
+    grid-area: k4;
+    border-radius: 0px 0px 10px 0px;
+}
+.keyi1{grid-area: ki1}
+.keyi2{grid-area: ki2}
+.keyi3{grid-area: ki3}
+.keyi4{grid-area: ki4}
+.keyi5{grid-area: ki5}
+.keyi6{grid-area: ki6}
+
+.key{
+    background-color: var(--light-blue);
+    transition: background-color 100ms ease-in-out;
+    cursor: pointer;
+}
+.key:hover{
+    background-color: var(--dark-blue);
+}
+.key2, .key4, .keyi1, .keyi2, .keyi3, .keyi4, .keyi5, .keyi6{
+    border-left: solid 2px var(--dark-blue);
+}
+.key1, .key2, .keyi1, .keyi2, .keyi3{
+    border-bottom: solid 2px var(--dark-blue);
+}
+.key1, .key2, .key3, .key4, .keyi1, .keyi2, .keyi3, .keyi4, .keyi5, .keyi6 {
+    border-top: solid 4px var(--lighter-blue);}
 
 .arrow-up:after, .arrow-down:after, .arrow-left:after, .arrow-right:after{
     content: "";
@@ -236,11 +332,21 @@ body{
     height: 100%; 
     width: 100%;
 }
+.arrow-up, .arrow-down, .arrow-left, .arrow-right{cursor:pointer}
+    
+.arrow-up:hover{background: linear-gradient(#0e0d2c 0%, var(--dark) 100%)}
+.arrow-down:hover{background: linear-gradient( var(--dark) 0%, #0e0d2c 100%)} 
+.arrow-right:hover{background: linear-gradient(90deg, var(--dark) 0%, #0e0d2c 100%)} 
+.arrow-left:hover{background: linear-gradient(90deg, #0e0d2c 0%, var(--dark) 100%)} 
+
+.arrow-down:hover, .arrow-left:hover, .arrow-right:hover {
+}
+
 .red-light{background: radial-gradient(circle,rgb(255, 1, 1) 0%,rgb(150, 0, 0) 95%)}
 .yellow-light{background: radial-gradient(circle,rgb(255, 238, 1) 0%,rgb(168, 157, 3) 95%)}
 .green-light{background: radial-gradient(circle,rgb(1, 255, 43) 0%,rgb(6, 134, 27) 95%)}
 .debug{border: 2px solid green}
-.big-circle, .bc-inner, .bci-eye, .bcie-light, .small-circle, .display-on, .joystick{border-radius: 50%;}
+.big-circle, .bc-inner, .bci-eye, .bcie-light, .small-circle, .display-on, .joystick, .yellow-circle{border-radius: 50%;}
 .case-right, .case-left, .big-circle, .white-display {box-shadow: 10px 10px 22px 0px var(--dark-red-transparent)}
 .bg-red{background-color: var(--main-red)}
 .border{border: 4px solid var(--border)}
@@ -261,6 +367,11 @@ body{
     "left center right"
     ". down ." ;
 }
+.grid-bot-but{grid-template-columns: 1fr 1fr}
+.grid-keyboard{grid-template-areas:
+    "k1 ki1 ki2 ki3 k2"
+    "k3 ki4 ki5 ki6 k4";
+}
 .relative{position: relative}
-.absolute,.hinge:before,.hinge:after, .white-display, .speaker, .display-on, .joystick, .selectors-container, .label, .arrows{position: absolute}
+.absolute,.hinge:before,.hinge:after, .white-display, .speaker, .display-on, .joystick, .selectors-container, .label, .arrows {position: absolute}
 .h-100{height: 100%}
