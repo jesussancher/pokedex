@@ -14,19 +14,63 @@
 }
 body{
     background-color: #cbdbda;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
-.container{
-    height: 90vh;
-    width: 50%;
-    margin: 10vh auto;
+@media only screen and (max-width: 600px) {
+    .container{
+        width:200%;
+        height: 100vh;
+    }
+    .sm{
+        display: none;
+        visibility: hidden;
+    }
+    .grid{
+    
+        display: block;
+    }
+    .grid-cases{
+        /* width: 100%; */
+        grid-template-columns: 200% 0%
+    }
+} 
+@media only screen and (min-width: 600px) {
+    .container{
+        height: 100vh;
+        width: 95%;
+        margin: 0 auto;
+    }
+}   
+@media only screen and (min-width: 768px) {
+    .container{
+        height: 100vh;
+        width: 80%;
+        margin: 0vh auto;
+    }
 }
+@media only screen and (min-width: 992px) {
+    .container{
+        height: 100vh;
+        width: 75%;
+        margin: 0vh auto;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .container{
+        height: 100vh;
+        width: 65%;
+        margin: 0vh auto;
+        /* align-items: center; */
+    }
+} 
 .case-left{
     border-radius: 15px 15px 0 15px;
     z-index: 10;
 }
+.cl-container{
+    height: 100vh;
+}
 .cl-inner{
-    /* margin: 12px; */
     height: 100%;
     align-self: end;
     border-radius: 0px 0 0px 10px;
@@ -35,6 +79,8 @@ body{
     z-index: 15;
 }
 .cl-curve{
+    right: -5px;
+    height: 100%;
     justify-self: end;
     width: 60%;
     clip-path: polygon(50% 43%, 100% 43%, 100% 100%, 0% 100%);
@@ -43,11 +89,11 @@ body{
 }
 .hinge{
     width: 100%;
-    height: 532px;
+    height: 100%;
     align-self: end;
     background: linear-gradient(90deg, var(--dark-red-transparent) 0%, rgba(0,0,0,0) 40%, var(--dark-red-transparent) 80%);
     background-color: var(--main-red);
-    z-index: 8;
+    z-index: 18;
 }
 .hinge:before, .hinge:after{
     content: "";
@@ -106,7 +152,7 @@ body{
     height: 30px;
     width: 100px;
     top: 15px;
-    left: 130px;
+    right: 30%;
 }
 .small-circle{    
     height: 18px;
@@ -181,7 +227,7 @@ body{
     height: 90px;
     width: 90px;
     bottom: 40px;
-    right: 10%;
+    right: 15%;
 }
 .arrow-up{
     grid-area: up;
@@ -319,6 +365,7 @@ body{
     border-radius: 10px;
     border-top: solid 8px var(--darker)
 }
+
 .key2, .key4, .keyi1, .keyi2, .keyi3, .keyi4, .keyi5, .keyi6{
     border-left: solid 2px var(--dark-blue);
 }
@@ -347,10 +394,6 @@ body{
 .arrow-down:hover{background: linear-gradient( var(--dark) 0%, var(--darker) 100%)} 
 .arrow-right:hover{background: linear-gradient(90deg, var(--dark) 0%, var(--darker) 100%)} 
 .arrow-left:hover{background: linear-gradient(90deg, var(--darker) 0%, var(--dark) 100%)} 
-
-.arrow-down:hover, .arrow-left:hover, .arrow-right:hover {
-}
-
 .red-light{background: radial-gradient(circle,rgb(255, 1, 1) 0%,rgb(150, 0, 0) 95%)}
 .yellow-light{background: radial-gradient(circle,rgb(255, 238, 1) 0%,rgb(168, 157, 3) 95%)}
 .green-light{background: radial-gradient(circle,rgb(1, 255, 43) 0%,rgb(6, 134, 27) 95%)}
